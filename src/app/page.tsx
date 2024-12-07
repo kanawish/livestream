@@ -8,41 +8,40 @@ export default function Home() {
       <Container size="1">
         <Flex direction="column" align="center" gap="5">
           <Image
-            src="/wordmark.svg"
-            alt="LiveKit"
-            width="240"
-            height="120"
-            className="invert dark:invert-0 mt-8 mb-2"
+              src="kanastruk-logo-white.svg"
+              alt="Logo"
+              width="260"
+              height="120"
+              className="invert dark:invert-0"
           />
           <Text as="p">
-            Welcome to the LiveKit livestream demo app. You can join or start
-            your own stream. Hosted on{" "}
-            <Link href="https://livekit.io/cloud" target="_blank">
-              LiveKit Cloud
-            </Link>
-            . Bored of the current color theme? Switch it up by pressing{" "}
-            <Kbd>⌘&thinsp;C</Kbd> !
+            Welcome to the Kanastruk Control Room demo app. You can join or start
+            your own stream.
           </Text>
           <HomeActions />
           <Separator orientation="horizontal" size="4" className="my-2" />
-          <Text as="p" size="2">
-            Feel free to clone this full-stack NextJS app{" "}
-            <Link
-              href="https://github.com/livekit-examples/livestream"
-              target="_blank"
-            >
-              here
-            </Link>
-            .
-            {/* And also be sure to check out clone our{" "}
-            <Link
-              href="https://github.com/livekit-examples/swift-livestream"
-              target="_blank"
-            >
-              iOS
-            </Link>{" "}
-            and <Link href="https://github.com/livekit-examples/android-livestream" target="_blank">Android</Link> clients, which are compatible with
-            this web app! */}
+          <Flex direction="row" gap="4">
+            <Text as="p" size="2">
+              Based off of the LiveKit livestream demo app. Find the original full-stack NextJS app{" "}
+              <Link
+                  href="https://github.com/livekit-examples/nextjs-livestream"
+                  target="_blank"
+              >
+                here
+              </Link>
+              .
+            </Text>
+            <Image
+                src="/wordmark.svg"
+                alt="LiveKit"
+                width="120"
+                height="60"
+                className="invert dark:invert-0"
+            />
+          </Flex>
+          <Text size="1">
+            Bored of the current color theme? Switch it up by pressing{" "}
+            <Kbd>⌘&thinsp;C</Kbd> !
           </Text>
         </Flex>
       </Container>

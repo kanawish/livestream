@@ -26,7 +26,9 @@ export function JoinDialog({ children }: { children: React.ReactNode }) {
               type="text"
               placeholder="abcd-1234"
               value={roomName}
-              onChange={(e) => setRoomName(e.target.value)}
+              onChange={(e) => {
+                setRoomName(e.target.value)
+              }}
             />
           </label>
         </Flex>

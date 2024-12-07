@@ -17,18 +17,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+      <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <Theme
+      <Theme
           appearance="dark"
-          accentColor="purple"
-          grayColor="mauve"
-          radius="none"
-        >
+          accentColor="gold"
+          grayColor="sand"
+          radius="small"
+          scaling="105%">
           {children}
-          <ThemePanel defaultOpen={false} />
-        </Theme>
+          <ThemePanel defaultOpen={false}/>
+      </Theme>
       </body>
-    </html>
+      </html>
   );
 }

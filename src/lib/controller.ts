@@ -29,6 +29,8 @@ export type ParticipantMetadata = {
 
 export type Config = {
   ws_url: string;
+
+
   api_key: string;
   api_secret: string;
 };
@@ -216,6 +218,7 @@ export class Controller {
       canSubscribe: true,
     });
 
+    console.log(`?? roomName: ${roomName}`)
     // TODO turn off auto creation in the dashboard
     await this.roomService.createRoom({
       name: roomName,
@@ -262,7 +265,9 @@ export class Controller {
     try {
       await this.roomService.getParticipant(room_name, identity);
       exists = true;
-    } catch {}
+    } catch (error) {
+      console.warn("Caught:", error)
+    }
 
     if (exists) {
       throw new Error("Participant already exists");
